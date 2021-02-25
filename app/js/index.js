@@ -18,8 +18,23 @@ for (let l = 0; l < 20; l++) {
   }
 }
 
-console.group(board)
+const matrix = [
+  [0, 1, 0, 0],
+  [0, 1, 0, 0],
+  [0, 1, 0, 0],
+  [0, 1, 0, 0],
+];
 
+matrix.forEach((row, y) => {
+  row.forEach((value, x) => {
+    if (value !== 0) {
+      console.log('y dentro do if', y);
+      console.log('x dentro do if', x);
+      context.fillStyle = 'red';
+      context.fillRect(x + 4, y + 4, 1, 1);
+    }
+  });
+});
 
 
 

@@ -1,8 +1,8 @@
 import Element from '../Element/Element';
 
 class Board extends Element {
-  constructor(context, canvas, positionX, positionY, width, color, numberColumn, numberRow, scaleX, scaleY) {
-    super(context, canvas, positionX, positionY, width, heigth)
+  constructor(context, canvas, posX, posY, width, heigth, color, numberColumn, numberRow, scaleX, scaleY) {
+    super(context, canvas, posX, posY, width, heigth)
     this.color = color;
     this.matrix = [];
     this.matrixBoardParams = {
@@ -13,6 +13,8 @@ class Board extends Element {
       x: scaleX,
       y: scaleY,
     };
+    this.posX = 0;
+    this.posY = 0;
   }
 
   scaleBoard() {
@@ -21,7 +23,7 @@ class Board extends Element {
 
   fillBoard() {
     this.context.fillStyle = this.color;
-    context.fillRect(0, 0, this.width, this.height);
+    context.fillRect(this.posX, this.posY, this.width, this.height);
   }
 
   bildBoardMatrix() {

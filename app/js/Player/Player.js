@@ -15,12 +15,10 @@ class Player extends ELement {
           this.context.fillStyle = this.color;
           this.context.fillRect(
             x + this.posX,
-            y + offset.y,
+            y + this.posY,
             1, 1);
         }
       });
     });
   }
-
-
 }

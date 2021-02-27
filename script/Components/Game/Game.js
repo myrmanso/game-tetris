@@ -9,6 +9,7 @@ class Game {
     this.counter = 0;
     this.fallInterval = 1000;
     this.score = 0;
+    this.gameOver = false;
   }
 
   configureKeyboardControls() {
@@ -23,6 +24,10 @@ class Game {
     this.configureKeyboardControls();
     this.fallingPiece();
     this.updateScore();
+
+    if (this.gameOver) {
+      this.draw();
+    }
   }
 
   checkIfIsCompleteLine() {
@@ -70,9 +75,7 @@ class Game {
     this.player.posX = (this.board.matrix[0].length / 2 | 0) - (this.player.matrix / 2 | 0);
 
     if (this.player.collide(this.board.matrix)) {
-      this.board.cleanBoard();
-      this.score = 0;
-      this.updateScore();
+      document.querySelector('.game-over').style.display = "block";
     }
   }
 

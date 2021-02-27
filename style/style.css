@@ -11,10 +11,22 @@ main {
   justify-content: center;
 }
 
+.game-over {
+  display: none;
+  position: relative;
+  color: #899874;
+  left: -30px;;
+  top: 242px;
+  font-size: 37px;
+  margin: 0;
+  background-color: #000;
+  padding: 11px;
+}
+
 .container {    
   border-radius: 20px;
-  width: 60%;
-  height: 85vh;
+  width: 40%;
+  height: 90vh;
   background-color: #f2c82c;
   display: flex;
   flex-direction: column;

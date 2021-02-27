@@ -1,4 +1,4 @@
-class Object {
+class CommonElements {
   constructor(context, canvas, posX, posY, width, heigth, counter, matrix, color) {
     this.context = context;
     this.canvas = canvas;

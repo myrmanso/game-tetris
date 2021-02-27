@@ -1,4 +1,4 @@
-class Board extends Object {
+class Board extends CommonElements {
   constructor(context, canvas, posX, posY, width, heigth, color, numberColumn, numberRow, scaleX, scaleY) {
     super(context, canvas, posX, posY, width, heigth)
     this.color = color;

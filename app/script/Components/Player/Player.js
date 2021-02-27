@@ -1,5 +1,3 @@
-import Object from '../Object/Object';
-
 class Player extends Object {
   coonstructor(context, canvas, posX, posY, piece) {
     super(context, canvas, posX, posY)
@@ -24,6 +22,4 @@ class Player extends Object {
         break;
     }
   }
-}
-
-export default Player;
+};

@@ -1,5 +1,3 @@
-import Object from '../Object/Object';
-
 class Board extends Object {
   constructor(context, canvas, posX, posY, width, heigth, color, numberColumn, numberRow, scaleX, scaleY) {
     super(context, canvas, posX, posY, width, heigth)
@@ -33,6 +31,4 @@ class Board extends Object {
     }
     this.matrixBoard = matrixBoard;
   }
-}
-
-export default Board;
+};

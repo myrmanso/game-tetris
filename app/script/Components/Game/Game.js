@@ -12,3 +12,5 @@ class Game extends Object {
     this.drawMatrix(this.player);
   }
 }
+
+export default Game;

@@ -1,5 +1,5 @@
-export const pieces = {
-  1: {
+const pieces = [
+  {
     matrix: [
       [0, 1, 0, 0],
       [0, 1, 0, 0],
@@ -8,7 +8,7 @@ export const pieces = {
     ],
     color: ''
   },
-  2: {
+  {
     matrix: [
       [0, 2, 0],
       [0, 2, 0],
@@ -16,7 +16,7 @@ export const pieces = {
     ],
     color: '',
   },
-  3: {
+  {
     matrix: [
       [0, 3, 0],
       [0, 3, 0],
@@ -24,14 +24,14 @@ export const pieces = {
     ],
     color: '',
   },
-  4: {
+  {
     matrix: [
       [4, 4],
       [4, 4],
     ],
     color: ''
   },
-  5: {
+  {
     matrix: [
       [5, 5, 0],
       [0, 5, 5],
@@ -39,7 +39,7 @@ export const pieces = {
     ],
     color: '',
   },
-  6: {
+  {
     matrix: [
       [0, 6, 6],
       [6, 6, 0],
@@ -47,7 +47,7 @@ export const pieces = {
     ],
     color: '',
   },
-  7: {
+  {
     matrix: [
       [0, 7, 0],
       [7, 7, 7],
@@ -55,4 +55,4 @@ export const pieces = {
     ],
     color: '',
   }
-};
+];

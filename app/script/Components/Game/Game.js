@@ -23,10 +23,6 @@ class Game {
     this.configureKeyboardControls();
     this.fallingPiece();
     this.updateScore();
-
-    if (this.player.collide(this.board.matrix)) {
-      this.board.matrix.forEach(row => row.fill(0));
-    }
   }
 
   checkIfIsCompleteLine() {
@@ -38,7 +34,6 @@ class Game {
       }
 
       const row = this.board.matrix.splice(line, 1)[0].fill(0);
-      console.log(row)
       this.board.matrix.unshift(row);
       ++line;
 
@@ -50,8 +45,11 @@ class Game {
     matrix.forEach((row, y) => {
       row.forEach((value, x) => {
         if (value !== 0) {
-          this.context.fillStyle = colors[value];
+          this.context.lineWidth = 0.1;
+          this.context.fillStyle = '#000';
+          this.context.strokeStyle = this.board.color;
           this.context.fillRect(x + offset.x, y + offset.y, 1, 1);
+          this.context.strokeRect(x + offset.x + 0.2, y + offset.y + 0.2, 0.6, 0.6);
         }
       });
     });
@@ -70,6 +68,12 @@ class Game {
     this.player.matrix = pieces[positionArray];
     this.player.posY = 0;
     this.player.posX = (this.board.matrix[0].length / 2 | 0) - (this.player.matrix / 2 | 0);
+
+    if (this.player.collide(this.board.matrix)) {
+      this.board.cleanBoard();
+      this.score = 0;
+      this.updateScore();
+    }
   }
 
   mergeBoardWithPlayer() {

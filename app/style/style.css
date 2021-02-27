@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+* {
+  font-family: 'DotGothic16', sans-serifs;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {    
+  border-radius: 20px;
+  width: 60%;
+  height: 85vh;
+  background-color: #f2c82c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.game{
+  background-color: #000;
+  margin-top: 40px;
+  width: 63%;
+  padding: 13px;
+}
+
+.game__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #899874;
+}
+
+#canvas {
+  margin: 10px;
+  border: 2px solid #000;
+}
+
+.score {
+  margin-left: 10px;
+}
+
+.score > * {
+  margin: 0;
+}
+.score > h2 {
+  font-size: 40px;
+}
+
+.actions {
+  margin: 45px;
+  width: 45%;
+}
+
+.actions {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.actions button {
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  background-color: #000;
+  border: none;
+  cursor: pointer;
+}
+
+.actions p {
+  margin: 0;
+}

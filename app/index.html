@@ -5,11 +5,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Teeris - game</title>
+  <link rel="stylesheet" href="./style/style.css">
 </head>
 
 <body>
-  <canvas id="canvas" width="240" height="400"></canvas>
-  <h1 class="score"></h1>
+  <main>
+    <div class="container">
+      <section class="game">
+        <div class="game__container">
+          <canvas id="canvas" width="240" height="400"></canvas>
+          <section class="score">
+            <h2 class="score__number"></h2>
+            <h3 class="score__title">SCORE</h3>
+          </section>
+        </div>
+      </section>
+
+      <section class="actions">
+        <div>
+          <button class="sound"></button>
+          <p>sound</p>
+        </div>
+        <div>
+          <button class="start"></button>
+          <p>start</p>
+        </div>
+        <div>
+          <button class="reset"></button>
+          <p>reset</p>
+        </div>
+      </section>
+    </div>
+  </main>
+  <div class="game-over"></div>
   <script type="text/javascript" src="./data/colors.js"></script>
   <script type="text/javascript" src="./data/pieces.js"></script>
   <script type="text/javascript" src="./script/Components/CommonElements/CommonElements.js"></script>

@@ -12,6 +12,7 @@ window.onload = () => {
   const gameTetris = new Game(context, canvas, board, player);
 
   gameTetris.draw();
+  gameTetris.fallingPiece();
 };
 
 

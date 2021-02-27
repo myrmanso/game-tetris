@@ -66,8 +66,8 @@ main {
 
 .actions button {
   border-radius: 100%;
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   background-color: #000;
   border: none;
   cursor: pointer;

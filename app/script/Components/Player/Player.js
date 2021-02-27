@@ -1,21 +1,29 @@
-class Player extends Object {
+class Player extends CommonElements {
   constructor(context, canvas, posX, posY, piece) {
     super(context, canvas, posX, posY);
     this.color = piece.color;
     this.matrix = piece.matrix;
+    this.position = {
+      x: this.posX,
+      y: this.posY,
+    };
   }
 
-  moves(keyCode, counter) {
+  moveDown(speed) {
+    this.position.y += speed;
+  }
+
+  consoleMove(keyCode, counter) {
     switch (keyCode) {
       case ArrowLeft:
-        this.posX -= 1;
+        thisposition.x -= 1;
         break;
       case ArrowRight:
-        this.posX += 1;
+        thisposition.x += 1;
         break;
       case ArrowDown:
         counter = 0;
-        this.posY++;
+        thisposition.y++;
         break;
       default:
         window.alert('Digite um movimento valido')

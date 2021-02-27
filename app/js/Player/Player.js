@@ -1,5 +1,4 @@
 import ELement from '../Element/Element';
-
 class Player extends ELement {
   coonstructor(context, canvas, posX, posY, width, heigth, piece) {
     super(context, canvas, posX, posY, width, heigth)
@@ -39,7 +38,6 @@ class Player extends ELement {
 
   }
 
-
   moves(keyCode) {
     switch (keyCode) {
       case ArrowLeft:
@@ -56,5 +54,4 @@ class Player extends ELement {
         break;
     }
   }
-
 }

@@ -34,3 +34,5 @@ class Board extends Object {
     this.matrixBoard = matrixBoard;
   }
 }
+
+export default Board;

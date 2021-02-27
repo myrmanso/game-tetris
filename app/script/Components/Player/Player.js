@@ -3,17 +3,13 @@ class Player extends CommonElements {
     super(context, canvas, posX, posY);
     this.color = piece.color;
     this.matrix = piece.matrix;
-    this.position = {
-      x: this.posX,
-      y: this.posY,
-    };
   }
 
   moveDown(speed) {
-    this.position.y += speed;
+    this.posY += speed;
   }
 
-  consoleMove(keyCode, counter) {
+  moveToDirection(keyCode) {
     switch (keyCode) {
       case ArrowLeft:
         thisposition.x -= 1;
@@ -22,7 +18,6 @@ class Player extends CommonElements {
         thisposition.x += 1;
         break;
       case ArrowDown:
-        counter = 0;
         thisposition.y++;
         break;
       default:

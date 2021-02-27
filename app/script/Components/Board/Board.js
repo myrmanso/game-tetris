@@ -1,6 +1,6 @@
-import Element from '../Element/Element';
+import Object from '../Object/Object';
 
-class Board extends Element {
+class Board extends Object {
   constructor(context, canvas, posX, posY, width, heigth, color, numberColumn, numberRow, scaleX, scaleY) {
     super(context, canvas, posX, posY, width, heigth)
     this.color = color;

@@ -1,23 +1,10 @@
-import ELement from '../Element/Element';
-class Player extends ELement {
+import Object from '../Object/Object';
+
+class Player extends Object {
   coonstructor(context, canvas, posX, posY, width, heigth, counter, piece) {
     super(context, canvas, posX, posY, width, heigth, counter)
     this.color = piece.color;
     this.matrix = piece.matrix;
-  }
-
-  drawPlayer() {
-    this.matrix.forEach((row, y) => {
-      row.forEach((value, x) => {
-        if (value !== 0) {
-          this.context.fillStyle = this.color;
-          this.context.fillRect(
-            x + this.posX,
-            y + this.posY,
-            1, 1);
-        }
-      });
-    });
   }
 
   moves(keyCode) {
@@ -38,3 +25,5 @@ class Player extends ELement {
     }
   }
 }
+
+export default Player;

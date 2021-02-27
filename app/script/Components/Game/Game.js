@@ -46,4 +46,10 @@ class Game {
 
     window.requestAnimationFrame((time = 0) => this.fallingPiece(time));
   }
+
+  configureKeyboardControls() {
+    document.addEventListener('keydown', event => {
+      this.player.moveToDirection(event.key);
+    });
+  }
 };

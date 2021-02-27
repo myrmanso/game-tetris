@@ -13,9 +13,8 @@ main {
 
 .game-over {
   display: none;
-  position: relative;
+  position: absolute;
   color: #899874;
-  left: -30px;;
   top: 242px;
   font-size: 37px;
   margin: 0;
@@ -26,7 +25,7 @@ main {
 .container {    
   border-radius: 20px;
   width: 40%;
-  height: 90vh;
+  height: 95vh;
   background-color: #f2c82c;
   display: flex;
   flex-direction: column;

@@ -13,21 +13,27 @@ class Player extends CommonElements {
   moveHorizontally(offset) {
     this.posX += offset;
     if (this.collide(this.boardMatrix)) {
-      console.log('pele');
       this.posX -= offset;
+    }
+  }
+
+  moveVertically() {
+    this.posY++;
+    if (this.collide(this.boardMatrix)) {
+      this.posY--;
     }
   }
 
   moveToDirection(keyCode) {
     switch (keyCode) {
       case 'ArrowLeft':
-        this.posX -= 1;
+        this.moveHorizontally(-1)
         break;
       case 'ArrowRight':
-        this.posX += 1;
+        this.moveHorizontally(1)
         break;
       case 'ArrowDown':
-        this.posY++;
+        this.moveVertically();
         break;
       default:
         break;

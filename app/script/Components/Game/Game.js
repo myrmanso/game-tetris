@@ -113,7 +113,7 @@ class Game {
   }
 
   updateScore() {
-    document.querySelector('.score').innerText = this.score;
+    document.querySelector('.score__number').innerText = this.score;
   }
 
 };

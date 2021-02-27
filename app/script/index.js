@@ -11,10 +11,7 @@ window.onload = () => {
 
   const gameTetris = new Game(context, canvas, board, player);
 
-  gameTetris.createPiece()
-  gameTetris.draw();
-  gameTetris.fallingPiece();
-  gameTetris.configureKeyboardControls();
+  gameTetris.startGame()
 };
 
 

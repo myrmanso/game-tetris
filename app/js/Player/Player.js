@@ -1,7 +1,7 @@
 import ELement from '../Element/Element';
 class Player extends ELement {
-  coonstructor(context, canvas, posX, posY, width, heigth, piece) {
-    super(context, canvas, posX, posY, width, heigth)
+  coonstructor(context, canvas, posX, posY, width, heigth, counter, piece) {
+    super(context, canvas, posX, posY, width, heigth, counter)
     this.color = piece.color;
     this.matrix = piece.matrix;
   }
@@ -20,34 +20,17 @@ class Player extends ELement {
     });
   }
 
-  moveLeft() {
-    return this.posX -= 1;
-  }
-
-  moveRight() {
-    return this.posX += 1;
-  }
-
-  movesBottom() {
-    this.counter = 0; s
-    return this.posY++;
-    ;
-  }
-
-  moveRotation() {
-
-  }
-
   moves(keyCode) {
     switch (keyCode) {
       case ArrowLeft:
-        this.moveLeft;
+        this.posX -= 1;
         break;
       case ArrowRight:
-        this.moveRight;
+        this.posX += 1;
         break;
       case ArrowDown:
-        this.movesBottom;
+        this.counter = 0;
+        this.posY++;
         break;
       default:
         window.alert('Digite um movimento valido')

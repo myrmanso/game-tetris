@@ -1,6 +1,6 @@
 class Player extends Object {
-  coonstructor(context, canvas, posX, posY, piece) {
-    super(context, canvas, posX, posY)
+  constructor(context, canvas, posX, posY, piece) {
+    super(context, canvas, posX, posY);
     this.color = piece.color;
     this.matrix = piece.matrix;
   }

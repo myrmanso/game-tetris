@@ -13,6 +13,7 @@ window.onload = () => {
 
   gameTetris.draw();
   gameTetris.fallingPiece();
+  gameTetris.configureKeyboardControls();
 };
 
 

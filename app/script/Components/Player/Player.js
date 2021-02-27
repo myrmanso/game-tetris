@@ -1,13 +1,13 @@
 import Object from '../Object/Object';
 
 class Player extends Object {
-  coonstructor(context, canvas, posX, posY, width, heigth, counter, piece) {
-    super(context, canvas, posX, posY, width, heigth, counter)
+  coonstructor(context, canvas, posX, posY, piece) {
+    super(context, canvas, posX, posY)
     this.color = piece.color;
     this.matrix = piece.matrix;
   }
 
-  moves(keyCode) {
+  moves(keyCode, counter) {
     switch (keyCode) {
       case ArrowLeft:
         this.posX -= 1;
@@ -16,7 +16,7 @@ class Player extends Object {
         this.posX += 1;
         break;
       case ArrowDown:
-        this.counter = 0;
+        counter = 0;
         this.posY++;
         break;
       default:

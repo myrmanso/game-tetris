@@ -1,5 +1,5 @@
 class Board extends CommonElements {
-  constructor(context, canvas, posX, posY, width, heigth, color, numberColumn, numberRow, scaleX, scaleY) {
+  constructor(context, canvas, posX, posY, width, heigth, color, numberColumn, numberRow) {
     super(context, canvas, posX, posY, width, heigth)
     this.color = color;
     this.matrix = [];

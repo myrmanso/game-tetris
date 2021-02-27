@@ -11,5 +11,6 @@ You can play the game [here](https://myrmanso.github.io/game-tetris/index.html).
 - Rotate
 - Levels
 - Menu
+- Sound
 - Save high scores
 - Show next piece 

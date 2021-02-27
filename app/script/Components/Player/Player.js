@@ -11,14 +11,14 @@ class Player extends CommonElements {
 
   moveToDirection(keyCode) {
     switch (keyCode) {
-      case ArrowLeft:
-        thisposition.x -= 1;
+      case 'ArrowLeft':
+        this.posX -= 1;
         break;
-      case ArrowRight:
-        thisposition.x += 1;
+      case 'ArrowRight':
+        this.posX += 1;
         break;
-      case ArrowDown:
-        thisposition.y++;
+      case 'ArrowDown':
+        this.posY++;
         break;
       default:
         window.alert('Digite um movimento valido')

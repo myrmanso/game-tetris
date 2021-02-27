@@ -1,12 +1,21 @@
 class Player extends CommonElements {
-  constructor(context, canvas, posX, posY, piece) {
+  constructor(context, canvas, posX, posY, boardMatrix) {
     super(context, canvas, posX, posY);
-    this.color = piece.color;
-    this.matrix = piece.matrix;
+    this.color = '';
+    this.matrix = [];
+    this.boardMatrix = boardMatrix;
   }
 
   moveDown(speed) {
     this.posY += speed;
+  }
+
+  moveHorizontally(offset) {
+    this.posX += offset;
+    if (this.collide(this.boardMatrix)) {
+      console.log('pele');
+      this.posX -= offset;
+    }
   }
 
   moveToDirection(keyCode) {
@@ -21,7 +30,6 @@ class Player extends CommonElements {
         this.posY++;
         break;
       default:
-        window.alert('Digite um movimento valido')
         break;
     }
   }

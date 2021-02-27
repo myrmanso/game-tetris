@@ -6,7 +6,7 @@ const pieces = [
       [0, 1, 0, 0],
       [0, 1, 0, 0],
     ],
-    color: ''
+    color: 'red'
   },
   {
     matrix: [
@@ -14,7 +14,7 @@ const pieces = [
       [0, 2, 0],
       [0, 2, 2],
     ],
-    color: '',
+    color: 'red',
   },
   {
     matrix: [
@@ -22,14 +22,14 @@ const pieces = [
       [0, 3, 0],
       [3, 3, 0],
     ],
-    color: '',
+    color: 'red',
   },
   {
     matrix: [
       [4, 4],
       [4, 4],
     ],
-    color: ''
+    color: 'red'
   },
   {
     matrix: [
@@ -37,7 +37,7 @@ const pieces = [
       [0, 5, 5],
       [0, 0, 0],
     ],
-    color: '',
+    color: 'red',
   },
   {
     matrix: [
@@ -45,7 +45,7 @@ const pieces = [
       [6, 6, 0],
       [0, 0, 0],
     ],
-    color: '',
+    color: 'red',
   },
   {
     matrix: [
@@ -53,6 +53,6 @@ const pieces = [
       [7, 7, 7],
       [0, 0, 0],
     ],
-    color: '',
+    color: 'red',
   }
 ];

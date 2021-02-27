@@ -13,7 +13,6 @@ class CommonElements {
 
   collide(board) {
     for (let y = 0; y < this.matrix.length; ++y) {
-      console.log('this.player.matrix.length', this.matrix.length);
       for (let x = 0; x < this.matrix[y].length; ++x) {
         if (this.matrix[y][x] !== 0 &&
           (board[y + this.posY] &&

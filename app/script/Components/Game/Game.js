@@ -28,6 +28,19 @@ class Game {
     this.drawMatrix(this.player.matrix, { x: this.player.posX, y: this.player.posY });
   }
 
+  collide() {
+    for (let y = 0; y < this.player.matrix.length; ++y) {
+      for (let x = 0; x < this.player.matrix[y].length; ++x) {
+        if (this.player.matrix[y][x] !== 0 &&
+          (this.board.matrix[y + this.player.posY] &&
+            this.board.matrix[y + this.player.posY][x + this.player.posX]) !== 0) {
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+
   fallingPiece(time) {
     if (typeof time === 'number') {
       const deltaTime = time - this.lastTime;

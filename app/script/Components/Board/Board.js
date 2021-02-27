@@ -19,4 +19,8 @@ class Board extends CommonElements {
       this.matrix.push(new Array(this.matrixBoardParams.numberRow).fill(0));
     }
   }
+
+  cleanBoard() {
+    this.matrix.forEach(row => row.fill(0));
+  }
 };
